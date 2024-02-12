@@ -26,7 +26,8 @@ function Example2() {
                     />
                     <button className="bg-blue-500 text-white p-2"
                         onClick={() => {
-                            Setdata([...data, { id: id++, label: todo }])
+                            if(todo ==="") return
+                            Setdata([...data, { id: id++, label: todo.trim() }])
                             SetTodo("")
                         }}
                     >
